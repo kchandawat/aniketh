@@ -1,5 +1,5 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-
+import "../styles/font/matter/stylesheet.css";
 const theme = extendTheme({
   colors: {
     brand: {
