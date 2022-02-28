@@ -177,6 +177,7 @@ export default function Home() {
               fontFamily="Matter"
               lineHeight={{ base: "44px", md: "66px", lg: "90px" }}
               fontStyle="normal"
+              maxW="1200px"
               fontWeight="400"
               fontSize={{ base: "40px", md: "60px", lg: "80px" }}
               textAlign={{ base: "left", xl: "justify" }}
