@@ -103,7 +103,13 @@ const Blog = (props) => {
 };
 export default function Home() {
   return (
-    <Flex bg="#fff" flexDirection="column" p={10} px={20} w="100%">
+    <Flex
+      bg="#fff"
+      flexDirection="column"
+      p={10}
+      px={{ base: 5, md: 20 }}
+      w="100%"
+    >
       {/* Head */}
       <Flex as="nav" justifyContent="space-between">
         <Flex>
@@ -118,17 +124,6 @@ export default function Home() {
           </Heading>
         </Flex>
         <Flex>
-          <Link
-            color="brand.200"
-            fontFamily="Matter"
-            fontStyle="normal"
-            fontWeight="400"
-            fontSize="22px"
-            style={{ textDecoration: "underline" }}
-            px={3}
-          >
-            Articles
-          </Link>
           <Link
             color="brand.200"
             fontFamily="Matter"
@@ -154,7 +149,18 @@ export default function Home() {
         </Flex>
       </Flex>
       <Flex flexDirection="column" mt="280px">
-        <Flex as="section" maxWidth="1600px">
+        <Flex
+          as="section"
+          maxWidth="1600px"
+          flexDirection={{ base: "column", lg: "row" }}
+        >
+          <Flex
+            align="center"
+            justify="center"
+            display={{ base: "flex", lg: "none" }}
+          >
+            <Image width="180px" height="180px" src="/aniketh-jain.png" />
+          </Flex>
           <Flex flexDirection="column">
             <QuoteIcon
               color={useColorModeValue("brand.200", "gray.600")}
@@ -163,32 +169,36 @@ export default function Home() {
             <Text
               color="brand.200"
               fontFamily="Matter"
-              lineHeight="90px"
+              lineHeight={{ base: "44px", md: "66px", lg: "90px" }}
               fontStyle="normal"
               fontWeight="400"
-              fontSize="80px"
-              textAlign="justify"
-              maxWidth="1200px"
+              fontSize={{ base: "40px", md: "60px", lg: "80px" }}
+              textAlign={{ base: "left", xl: "justify" }}
             >
               Inspired to break the tradition of going into family business and
               started my own company.
             </Text>
           </Flex>{" "}
-          <Flex align="center" ml="100px">
+          <Flex
+            align="center"
+            ml="100px"
+            display={{ base: "none", lg: "flex" }}
+          >
             <Image width="300px" height="300px" src="/aniketh-jain.png" />
           </Flex>
         </Flex>
 
         <Flex flexDirection="row" mt={20}>
           <Text
+            display="block"
             color="brand.200"
             fontFamily="Matter"
-            lineHeight="44px"
+            lineHeight={{ base: "28px", lg: "44px" }}
             maxWidth="900px"
             fontStyle="normal"
             fontWeight="400"
             textAlign="justify"
-            fontSize="28px"
+            fontSize={{ base: "20px", md: "24px", lg: "28px" }}
           >
             Dare to change is the vision I truly believe in and am passionate
             about transforming startups to help them achieve their true
@@ -244,11 +254,11 @@ export default function Home() {
           color="brand.200"
           borderBottom="2px solid  white"
           fontFamily="Matter"
-          lineHeight="44px"
+          lineHeight={{ base: "28px", lg: "44px" }}
           fontStyle="italic"
           fontWeight="400"
           textAlign="justify"
-          fontSize="24px"
+          fontSize={{ base: "18px", lg: "24px" }}
           _hover={{
             backgroundImage:
               "-webkit-gradient(linear, left top, left bottom, from(#FEF5DF), to(#FEF5DF))",
