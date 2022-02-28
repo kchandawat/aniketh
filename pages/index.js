@@ -157,6 +157,7 @@ export default function Home() {
           <Flex
             align="center"
             justify="center"
+            mb={3}
             display={{ base: "flex", lg: "none" }}
           >
             <Image
@@ -207,6 +208,7 @@ export default function Home() {
             maxWidth="900px"
             fontStyle="normal"
             fontWeight="400"
+            style={{ wordSpacing: "-2px" }}
             textAlign="justify"
             fontSize={{ base: "20px", md: "24px", lg: "28px" }}
           >
