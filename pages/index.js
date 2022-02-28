@@ -159,7 +159,12 @@ export default function Home() {
             justify="center"
             display={{ base: "flex", lg: "none" }}
           >
-            <Image width="180px" height="180px" src="/aniketh-jain.png" />
+            <Image
+              width="180px"
+              height="180px"
+              src="/aniketh-jain.png"
+              loading="eager"
+            />
           </Flex>
           <Flex flexDirection="column">
             <QuoteIcon
@@ -184,7 +189,12 @@ export default function Home() {
             ml="100px"
             display={{ base: "none", lg: "flex" }}
           >
-            <Image width="300px" height="300px" src="/aniketh-jain.png" />
+            <Image
+              width="300px"
+              height="300px"
+              src="/aniketh-jain.png"
+              loading="eager"
+            />
           </Flex>
         </Flex>
 
