@@ -6,7 +6,7 @@ import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { HiHeart, HiShare } from "react-icons/hi"; 
 import { RWebShare } from "react-web-share";
  
-export default function blog()
+export default function Blog()
 {
     const [liked, changeLike] = useState(false)
     return(

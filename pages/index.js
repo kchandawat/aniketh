@@ -136,8 +136,8 @@ export default function Home() {
               fontSize={{ base: "40px", md: "60px", lg: "80px" }}
               textAlign={{ base: "left", xl: "justify" }}
             >
-              Hi, I'm Aniketh Jain, the former Co-founder of Solutions Infini
-              which is now Kaleyra. And this is my personal page.
+              Hi, I&apos;m Aniketh Jain, the former Co-founder of Solutions
+              Infini which is now Kaleyra. And this is my personal page.
             </Text>
           </Flex>{" "}
           <Flex
@@ -182,10 +182,11 @@ export default function Home() {
             earliest.
             <br />
             <br />
-            I hope to complete Half Iron man one day. I'm also an avid listener
-            of Mohamed Rafi and Kishore Kumar songs & wish to attend a Coldplay
-            concert at the earliest. I also like to collect coins and currencies
-            from various countries & have a small collection of my own.
+            I hope to complete Half Iron man one day. I&apos;m also an avid
+            listener of Mohamed Rafi and Kishore Kumar songs & wish to attend a
+            Coldplay concert at the earliest. I also like to collect coins and
+            currencies from various countries & have a small collection of my
+            own.
             <br />
             <br />
             My Co-founder Ashish, a college friend started a company called
@@ -211,14 +212,14 @@ export default function Home() {
             <br />
             Once we sold Solutions Infini, I have started investing in various
             startups primarily to learn how the new-age startups hustle in
-            today's world and also wherever possible help them. I have mostly
-            been having discussions with the founders & sharing my learnings
-            from my journey. In my journey thus far I have made a strong network
-            & help by connecting people in the community if required. My
-            investment philosophy is simple, I invest in people. Of Course, a
-            good business idea is important but the founders are the deciding
-            factor for me, who has been connected with me over the years or a
-            fellow entrepreneur's connection. My Investments are{" "}
+            today&apos;s world and also wherever possible help them. I have
+            mostly been having discussions with the founders & sharing my
+            learnings from my journey. In my journey thus far I have made a
+            strong network & help by connecting people in the community if
+            required. My investment philosophy is simple, I invest in people. Of
+            Course, a good business idea is important but the founders are the
+            deciding factor for me, who has been connected with me over the
+            years or a fellow entrepreneur&apos;s connection. My Investments are{" "}
             <Link
               href="https://www.ripplr.in/"
               style={{ textDecoration: "underline" }}
