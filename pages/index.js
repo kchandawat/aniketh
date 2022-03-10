@@ -18,13 +18,7 @@ import { QuoteIcon } from "../QuoteIcon.tsx";
 
 export default function Home() {
   return (
-    <Flex
-      bg={useColorModeValue("#fff", "#222225")}
-      flexDirection="column"
-      p={10}
-      px={{ base: 5, md: 20 }}
-      w="100%"
-    >
+    <Flex flexDirection="column" p={10} px={{ base: 5, md: 20 }} w="100%">
       <Head>
         <meta charset="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -133,7 +127,7 @@ export default function Home() {
               fontStyle="normal"
               maxW="1200px"
               fontWeight="400"
-              fontSize={{ base: "40px", md: "60px", lg: "80px" }}
+              fontSize={{ base: "32px", md: "60px", lg: "80px" }}
               textAlign={{ base: "left", xl: "justify" }}
             >
               Hi, I&apos;m Aniketh Jain, the former Co-founder of Solutions
@@ -157,7 +151,7 @@ export default function Home() {
         <Flex flexDirection="row" mt={20}>
           <Text
             display="block"
-            color={useColorModeValue("brand.200", "brand.100")}
+            color={useColorModeValue("brand.200", "brand.400")}
             fontFamily="Matter"
             lineHeight={{ base: "28px", lg: "44px" }}
             maxWidth="900px"
