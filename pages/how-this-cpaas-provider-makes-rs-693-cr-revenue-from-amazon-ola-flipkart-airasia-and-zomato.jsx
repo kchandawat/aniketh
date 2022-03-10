@@ -1,28 +1,70 @@
-import { Avatar, Box, CloseButton, Divider, Flex, Heading, Icon, IconButton, Img, Text } from "@chakra-ui/react";
-import { BsHeart } from "react-icons/bs";
-import { HiHeart, HiShare } from "react-icons/hi";
+import { Avatar, Box, CloseButton, Divider, Flex, Heading, Icon, IconButton, Img, Text, useColorModeValue } from "@chakra-ui/react";
+import Head from "next/head";
+import Router from 'next/router'
+import { useState } from "react";
+import { BsHeart, BsHeartFill } from "react-icons/bs";
+import { HiHeart, HiShare } from "react-icons/hi"; 
+import { RWebShare } from "react-web-share";
  
 export default function blog()
 {
+    const [liked, changeLike] = useState(false)
     return(
-        <Flex w="100%" h="100vh" overflow="hidden">
+        <Flex w="100%" h="100vh" overflow={{base:"auto",lg:"hidden"}} flexDir={{base:"column",md:"column",lg:"row"}}>
+            <Head>
+        <meta charset="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+
+        <title>How CPAAS provider makes 693 CR</title>
+        <meta
+          name="keywords"
+          content="Aniketh Jain | Co-founder | Kaleyra | Personal Page"
+        />
+        <meta
+          name="description"
+          content="When customers order food on the Zomato or Swiggy app, they expect to receive message updates on the status of the delivery."
+        />
+        <meta name="author" content="Aniketh Jain" />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
             <Flex w="100%" bg="#484855" h="100vh" flexDir="column">
                 <Flex justify="center" py={20} h="100%">
-                    <Flex flexDir="column" justifyContent="space-between">
-                <Flex flexDir="column"   mt={10} maxW="3xl">
+                    <Flex flexDir="column" justifyContent="space-between" px={{base:10,md:5,lg:3,xl:2}}>
+                <Flex flexDir="column"   mt={10} maxW="3xl" >
                     <Heading 
                     color="#fff"
             fontFamily="Matter"
             
             textTransform="uppercase"
             fontWeight="500"
-            fontSize="54px">How this CPaaS provider makes Rs 693 Cr:</Heading>
+            fontSize={{base:"27px",md:"40px",lg:"54px"}}>How this CPaaS provider makes Rs 693 Cr:</Heading>
                     <Heading color="#fff"
             fontFamily="Matter"
             fontStyle="normal"
              
             fontWeight="300"
-            fontSize="42px">Revenue from Amazon, Ola, Flipkart, AirAsia and Zomato</Heading>
+            fontSize={{base:"21px",md:"32px",lg:"42px"}}>Revenue from Amazon, Ola, Flipkart, AirAsia and Zomato</Heading>
             <Divider w="20%" border={4} my={5} borderColor="#e57b69"/></Flex>
             <Flex    >
             <Flex   >
@@ -32,13 +74,13 @@ export default function blog()
             fontStyle="normal"
             
             fontWeight="300"
-            fontSize="24px">Aniketh <b>Jain</b></Text></Flex>
+            fontSize={{base:"18px",md:"20px",lg:"24px"}}>Aniketh <b>Jain</b></Text></Flex>
                 </Flex></Flex>
                 </Flex></Flex>
                 
             </Flex>
             <Flex w="100%" flexDir="column">
-                <Flex  justify="flex-end" p={5} display="flex"  >  <CloseButton bgColor="transparent" size="lg"  /></Flex>
+                <Flex  justify="flex-end" p={5} display="flex"  >    <CloseButton bgColor="transparent" size="md" onClick={()=>Router.push('/')}/> </Flex>
                 <Flex overflow="auto" p={5} css={{
     '&::-webkit-scrollbar': {
       width: '4px',
@@ -51,13 +93,14 @@ export default function blog()
       borderRadius: '24px',
     },
   }}>
-                    <Text color="brand.200" 
+                    <Text color={useColorModeValue("brand.200","brand.400")} 
             fontFamily="Matter"
             fontStyle="normal"
-             
+            align="justify"
+            lineHeight={{ base: "28px", lg: "36px" }}
             fontWeight="300"
-            fontSize="22px">
-                    <em style={{fontSize:"44px"}}>W</em>hen customers order food on the Zomato or Swiggy app, they expect to receive message updates on the status of the delivery. The mobile notifications and messages after shopping from Flipkart or Amazon, also helps the customers in keeping a track of their parcel. Various notifications also inform customers about the deals and offers.
+            fontSize={{base:"18px",md:"20px",lg:"22px"}}>
+                    <Text as="span"  fontSize={{base:"32px",md:"38px",lg:"44px"}}>W</Text>hen customers order food on the Zomato or Swiggy app, they expect to receive message updates on the status of the delivery. The mobile notifications and messages after shopping from Flipkart or Amazon, also helps the customers in keeping a track of their parcel. Various notifications also inform customers about the deals and offers.
 <br/><br/>
 But, to make this communication possible, the enterprise needs to set up its own backend infrastructure and interfaces. And, this costs a lot of money.
 <br/><br/>
@@ -163,18 +206,28 @@ We have also filed an application for going public in the New York Stock Exchang
                 </Flex>
                 <Flex  ><Box h={20} w="100%"   boxShadow="dark-lg"   justifyContent="center"  >
                      
-                    <Flex justifyContent="space-between"   px="100px" h="100%" align="center">
+                    <Flex justifyContent="space-between"   px={{base:"50px",md:"75px",lg:"100px"}} h="100%" align="center">
                     <Heading
-                     color="brand.200"
+                     color={useColorModeValue("brand.200","brand.400")}
                      fontFamily="Matter"
                      
                      textTransform="uppercase"
                      fontWeight="400"
-                     fontSize="20px"
+                     fontSize={{base:"14px",md:"17px",lg:"20px"}}
                     >Friday 24 Feb 2022 - <b>23:47</b></Heading>
                     <Flex>
-                    <IconButton icon={<HiShare/>} bgColor="transparent" />
-                    <IconButton icon={<BsHeart color="red"/>} bgColor="transparent" /></Flex>
+                    <RWebShare
+                data={{
+                    text: "HOW THIS CPAAS PROVIDER MAKES RS 693 CR - Aniketh Jain",
+                    url: "/how-this-cpaas-provider-makes-rs-693-cr-revenue-from-amazon-ola-flipkart-airasia-and-zomato",
+                    title: "HOW THIS CPAAS PROVIDER MAKES RS 693 CR - Aniketh Jain",
+
+                }}
+                onClick={() => console.log("shared successfully!")}
+            >
+                 
+             <IconButton icon={<HiShare/>} bgColor="transparent" /></RWebShare>
+                    <IconButton onClick={()=>{if(liked){changeLike(false) }else {changeLike(true)}}} icon={<Flex><BsHeart style={{display:liked?"none":"flex"}} color="red" /><BsHeartFill style={{display:liked?"flex":"none"}} color="red"/></Flex>} bgColor="transparent"  /></Flex>
                     </Flex> 
                     </Box></Flex>
             </Flex>
